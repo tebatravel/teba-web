@@ -5,8 +5,8 @@
 // -------- Configuración editable --------
 // Cambia estos datos por los reales de Teba Travel.
 const TEBA = {
-  whatsapp: '573000000000',            // número con código de país, sin + ni espacios
-  email:    'marca@tebatravel.com',
+  whatsapp: '573015750028',            // número con código de país, sin + ni espacios
+  email:    'reservastebatravel@gmail.com',
   waMsgDefault: 'Hola Teba 👋, quiero información sobre un viaje.'
 };
 
