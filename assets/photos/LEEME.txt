@@ -1,0 +1,17 @@
+Coloca aquí las fotos del sitio con estos nombres exactos:
+
+  hero.jpg              → foto grande del hero (ala de avión / horizonte al amanecer)
+  personas.jpg          → familia o viajero de espaldas disfrutando el destino
+  destino-cartagena.jpg → Cartagena
+  destino-sanandres.jpg → San Andrés
+  destino-cancun.jpg    → Cancún
+  destino-paris.jpg     → París
+  destino-nyc.jpg       → Nueva York
+  destino-dubai.jpg     → Dubái
+
+Formato recomendado: JPG, orientación vertical para destinos (4:5) y
+apaisada para el hero. No hace falta optimizarlas: si las dejas aquí,
+Teba (Claude) las ajusta de tamaño y peso.
+
+Mientras no haya foto, el sitio muestra un fondo de marca elegante — nunca
+se ve roto.

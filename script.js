@@ -5,8 +5,8 @@
 // -------- Configuración editable --------
 // Cambia estos datos por los reales de Teba Travel.
 const TEBA = {
-  whatsapp: '573015750028',            // número con código de país, sin + ni espacios
-  email:    'reservastebatravel@gmail.com',
+  whatsapp: '573000000000',            // número con código de país, sin + ni espacios
+  email:    'marca@tebatravel.com',
   waMsgDefault: 'Hola Teba 👋, quiero información sobre un viaje.'
 };
 
@@ -50,6 +50,23 @@ const io = new IntersectionObserver((entries) => {
   });
 }, { threshold: 0.12, rootMargin: '0px 0px -40px 0px' });
 $$('.reveal').forEach((el, i) => { el.style.transitionDelay = `${(i % 3) * 60}ms`; io.observe(el); });
+
+// -------- Carga de fotos (con respaldo de marca) --------
+// Cada <img class="js-photo" data-src="..."> intenta cargar su foto.
+// Si existe, aparece con un fundido; si no, se queda el fondo de marca.
+$$('.js-photo').forEach(img => {
+  const src = img.getAttribute('data-src');
+  if (!src) return;
+  const probe = new Image();
+  probe.onload = () => {
+    img.src = src;
+    img.classList.add('is-loaded');
+    const destino = img.closest('.destino');
+    if (destino) destino.classList.remove('no-photo');
+  };
+  probe.onerror = () => { /* se mantiene el fondo de marca */ };
+  probe.src = src;
+});
 
 // -------- Formulario de cotización --------
 const form = $('#quoteForm');

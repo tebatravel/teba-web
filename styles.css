@@ -267,11 +267,18 @@ p { color: var(--muted); }
    -------------------------------------------------------------------------- */
 .split { display: grid; grid-template-columns: 1fr 1fr; gap: 56px; align-items: center; }
 .biz-panel {
+  position: relative; overflow: hidden;
   background:
     radial-gradient(120% 90% at 100% 0%, #0F4EA8 0%, rgba(15,78,168,0) 55%),
     linear-gradient(155deg, #0A2F63 0%, #082C59 60%, #061F42 100%);
   border-radius: 24px; padding: 40px; color: var(--white); box-shadow: var(--shadow-lg);
 }
+.biz-panel .biz-photo { position: absolute; inset: 0; z-index: 0; }
+.biz-panel .biz-photo img { width: 100%; height: 100%; object-fit: cover; opacity: 0; transition: opacity .5s var(--ease); }
+.biz-panel .biz-photo img.is-loaded { opacity: 1; }
+.biz-panel .biz-overlay { position: absolute; inset: 0; z-index: 1;
+  background: linear-gradient(155deg, rgba(10,47,99,0.82) 0%, rgba(8,44,89,0.86) 55%, rgba(6,31,66,0.92) 100%); }
+.biz-panel > *:not(.biz-photo):not(.biz-overlay) { position: relative; z-index: 2; }
 .biz-panel .eyebrow { color: var(--sky); }
 .biz-panel h2 { color: var(--white); margin: 14px 0 10px; }
 .biz-panel p { color: rgba(255,255,255,0.78); }
@@ -362,6 +369,67 @@ p { color: var(--muted); }
 }
 .wa-float:hover { transform: scale(1.07); }
 .wa-float svg { width: 30px; height: 30px; }
+
+/* --------------------------------------------------------------------------
+   Fotos con fondo de marca de respaldo (nunca se ve "roto")
+   -------------------------------------------------------------------------- */
+.photo {
+  position: relative; overflow: hidden; border-radius: var(--radius-card);
+  background:
+    radial-gradient(120% 120% at 15% 0%, #0F4EA8 0%, rgba(15,78,168,0) 55%),
+    linear-gradient(160deg, #0A2F63 0%, #082C59 55%, #061F42 100%);
+}
+.photo img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transition: opacity .5s var(--ease);
+}
+.photo img.is-loaded { opacity: 1; }
+.photo .photo__ph {
+  position: absolute; inset: 0; display: grid; place-items: center; opacity: .9;
+}
+.photo .photo__ph img { position: static; width: 42%; max-width: 120px; opacity: .9; }
+
+/* Foto en el panel del hero */
+.hero__panel .photo { position: absolute; inset: 0; border-radius: inherit; }
+.hero__panel .panel-overlay {
+  position: absolute; inset: 0; z-index: 2;
+  background: linear-gradient(180deg, rgba(6,31,66,0.10) 0%, rgba(6,31,66,0.05) 45%, rgba(6,31,66,0.55) 100%);
+}
+
+/* --------------------------------------------------------------------------
+   Destinos
+   -------------------------------------------------------------------------- */
+.destinos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 20px; }
+.destino {
+  position: relative; border-radius: var(--radius-card); overflow: hidden;
+  aspect-ratio: 4 / 5; box-shadow: var(--shadow); display: block;
+  background:
+    radial-gradient(120% 120% at 15% 0%, #0F4EA8 0%, rgba(15,78,168,0) 55%),
+    linear-gradient(160deg, #0A2F63 0%, #082C59 55%, #061F42 100%);
+  transition: transform .22s var(--ease), box-shadow .22s var(--ease);
+}
+.destino:hover { transform: translateY(-4px); box-shadow: var(--shadow-lg); }
+.destino img {
+  position: absolute; inset: 0; width: 100%; height: 100%; object-fit: cover;
+  opacity: 0; transition: opacity .5s var(--ease), transform .5s var(--ease);
+}
+.destino img.is-loaded { opacity: 1; }
+.destino:hover img.is-loaded { transform: scale(1.06); }
+.destino__grad {
+  position: absolute; inset: 0; z-index: 2;
+  background: linear-gradient(180deg, rgba(6,31,66,0) 35%, rgba(6,31,66,0.78) 100%);
+}
+.destino__body { position: absolute; z-index: 3; left: 0; right: 0; bottom: 0; padding: 20px; color: #fff; }
+.destino__k { font-family: var(--font-body); font-weight: 600; font-size: 11px; letter-spacing: .16em; text-transform: uppercase; color: var(--sky); }
+.destino__t { font-family: var(--font-head); font-weight: 800; font-size: 22px; line-height: 1.1; margin-top: 6px; }
+.destino__s { font-size: 13px; color: rgba(255,255,255,0.82); margin-top: 4px; }
+.destino .photo__ph { position: absolute; inset: 0; z-index: 1; display: grid; place-items: center; }
+.destino .photo__ph img { position: static; opacity: 0; width: 40%; max-width: 90px; animation: none; }
+/* Cuando NO hay foto, mostramos el símbolo tenue como marca de agua */
+.destino.no-photo .photo__ph img { opacity: .22; }
+
+@media (max-width: 860px) { .destinos-grid { grid-template-columns: repeat(2, 1fr); } }
+@media (max-width: 520px) { .destinos-grid { grid-template-columns: 1fr; } }
 
 /* Reveal on scroll */
 .reveal { opacity: 0; transform: translateY(18px); transition: opacity .6s var(--ease), transform .6s var(--ease); }

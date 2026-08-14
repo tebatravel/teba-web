@@ -35,6 +35,7 @@
       </a>
       <ul class="nav__links" id="navLinks">
         <li><a href="#servicios">Servicios</a></li>
+        <li><a href="#destinos">Destinos</a></li>
         <li><a href="#empresas">Empresas</a></li>
         <li><a href="#porque">Por qué Teba</a></li>
         <li><a href="#personas">Personas</a></li>
@@ -72,11 +73,15 @@
 
       <div class="hero__visual">
         <div class="hero__panel">
-          <svg class="wave" viewBox="0 0 400 440" preserveAspectRatio="none" aria-hidden="true">
+          <div class="photo">
+            <div class="photo__ph"><img src="assets/brand/simbolo-white.png" alt="" aria-hidden="true" /></div>
+            <img class="js-photo" data-src="assets/photos/hero.jpg" alt="Viajero mirando el horizonte al amanecer" />
+          </div>
+          <div class="panel-overlay" aria-hidden="true"></div>
+          <svg class="wave" viewBox="0 0 400 440" preserveAspectRatio="none" aria-hidden="true" style="z-index:3">
             <path d="M0 300 Q100 270 200 300 T400 300 V440 H0 Z" fill="rgba(61,187,255,0.10)"/>
             <path d="M0 340 Q100 312 200 340 T400 340 V440 H0 Z" fill="rgba(61,187,255,0.08)"/>
           </svg>
-          <img class="hero__symbol" src="assets/brand/simbolo-white.png" alt="" aria-hidden="true" />
         </div>
         <div class="floatcard" aria-hidden="true">
           <div class="floatcard__row">
@@ -167,12 +172,75 @@
   </div>
 </section>
 
+<!-- ====================== DESTINOS ====================== -->
+<section class="section section--gray" id="destinos">
+  <div class="container">
+    <div class="section-head center reveal">
+      <span class="eyebrow">Destinos</span>
+      <h2>Donde empieza cada viaje</h2>
+      <p>Nacionales e internacionales. Te armamos el viaje completo al destino que sueñas — o al que necesita tu empresa.</p>
+    </div>
+    <div class="destinos-grid">
+
+      <a class="destino no-photo reveal" href="#contacto">
+        <div class="photo__ph"><img src="assets/brand/simbolo-white.png" alt="" aria-hidden="true" /></div>
+        <img class="js-photo" data-src="assets/photos/destino-cartagena.jpg" alt="Cartagena, Colombia" />
+        <div class="destino__grad"></div>
+        <div class="destino__body"><span class="destino__k">Colombia</span><div class="destino__t">Cartagena</div><div class="destino__s">Playa, historia y Caribe</div></div>
+      </a>
+
+      <a class="destino no-photo reveal" href="#contacto">
+        <div class="photo__ph"><img src="assets/brand/simbolo-white.png" alt="" aria-hidden="true" /></div>
+        <img class="js-photo" data-src="assets/photos/destino-sanandres.jpg" alt="San Andrés, Colombia" />
+        <div class="destino__grad"></div>
+        <div class="destino__body"><span class="destino__k">Colombia</span><div class="destino__t">San Andrés</div><div class="destino__s">El mar de siete colores</div></div>
+      </a>
+
+      <a class="destino no-photo reveal" href="#contacto">
+        <div class="photo__ph"><img src="assets/brand/simbolo-white.png" alt="" aria-hidden="true" /></div>
+        <img class="js-photo" data-src="assets/photos/destino-cancun.jpg" alt="Cancún, México" />
+        <div class="destino__grad"></div>
+        <div class="destino__body"><span class="destino__k">México</span><div class="destino__t">Cancún</div><div class="destino__s">Todo incluido en el Caribe</div></div>
+      </a>
+
+      <a class="destino no-photo reveal" href="#contacto">
+        <div class="photo__ph"><img src="assets/brand/simbolo-white.png" alt="" aria-hidden="true" /></div>
+        <img class="js-photo" data-src="assets/photos/destino-paris.jpg" alt="París, Francia" />
+        <div class="destino__grad"></div>
+        <div class="destino__body"><span class="destino__k">Francia</span><div class="destino__t">París</div><div class="destino__s">La escapada clásica</div></div>
+      </a>
+
+      <a class="destino no-photo reveal" href="#contacto">
+        <div class="photo__ph"><img src="assets/brand/simbolo-white.png" alt="" aria-hidden="true" /></div>
+        <img class="js-photo" data-src="assets/photos/destino-nyc.jpg" alt="Nueva York, Estados Unidos" />
+        <div class="destino__grad"></div>
+        <div class="destino__body"><span class="destino__k">Estados Unidos</span><div class="destino__t">Nueva York</div><div class="destino__s">Negocios y ciudad que no duerme</div></div>
+      </a>
+
+      <a class="destino no-photo reveal" href="#contacto">
+        <div class="photo__ph"><img src="assets/brand/simbolo-white.png" alt="" aria-hidden="true" /></div>
+        <img class="js-photo" data-src="assets/photos/destino-dubai.jpg" alt="Dubái, Emiratos Árabes Unidos" />
+        <div class="destino__grad"></div>
+        <div class="destino__body"><span class="destino__k">Emiratos Árabes</span><div class="destino__t">Dubái</div><div class="destino__s">Lujo y grandes eventos</div></div>
+      </a>
+
+    </div>
+    <div class="center" style="margin-top:38px">
+      <a class="btn btn--primary" href="#contacto">Cotiza tu destino
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg>
+      </a>
+    </div>
+  </div>
+</section>
+
 <!-- ====================== EMPRESAS ====================== -->
 <section class="section section--gray" id="empresas">
   <div class="container">
     <div class="split">
       <div class="reveal">
         <div class="biz-panel">
+          <div class="biz-photo"><img class="js-photo" data-src="assets/photos/empresas.jpg" alt="Viajero de negocios en el aeropuerto" /></div>
+          <div class="biz-overlay" aria-hidden="true"></div>
           <span class="eyebrow">Teba para empresas</span>
           <h2>Un solo aliado para todos los viajes de tu equipo</h2>
           <p>Gestionamos los viajes corporativos de principio a fin: políticas de viaje, cuentas centralizadas y un asesor que conoce tu operación.</p>
@@ -256,11 +324,11 @@
       </div>
       <div class="reveal">
         <div class="hero__panel" style="aspect-ratio:4/3.4">
-          <svg class="wave" viewBox="0 0 400 340" preserveAspectRatio="none" aria-hidden="true">
-            <path d="M0 220 Q100 190 200 220 T400 220 V340 H0 Z" fill="rgba(61,187,255,0.10)"/>
-            <path d="M0 260 Q100 232 200 260 T400 260 V340 H0 Z" fill="rgba(61,187,255,0.08)"/>
-          </svg>
-          <img class="hero__symbol" src="assets/brand/simbolo-white.png" alt="" aria-hidden="true" style="max-width:170px" />
+          <div class="photo">
+            <div class="photo__ph"><img src="assets/brand/simbolo-white.png" alt="" aria-hidden="true" style="max-width:150px" /></div>
+            <img class="js-photo" data-src="assets/photos/personas.jpg" alt="Familia disfrutando sus vacaciones frente al mar" />
+          </div>
+          <div class="panel-overlay" aria-hidden="true"></div>
         </div>
       </div>
     </div>
