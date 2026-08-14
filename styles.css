@@ -208,7 +208,7 @@ p { color: var(--muted); }
 
 /* Tarjeta flotante estilo reserva */
 .floatcard {
-  position: absolute; left: -22px; bottom: 34px; width: min(300px, 78%);
+  position: absolute; left: 18px; bottom: 18px; width: min(290px, 74%);
   background: var(--white); border-radius: var(--radius-card); box-shadow: var(--shadow-lg);
   padding: 16px; border: 1px solid var(--line);
 }
@@ -221,7 +221,7 @@ p { color: var(--muted); }
 .floatcard__bar i { display: block; height: 100%; width: 72%; background: linear-gradient(90deg, var(--ocean), var(--sky)); border-radius: 999px; }
 .floatcard__meta { display: flex; justify-content: space-between; margin-top: 10px; font-size: 11px; letter-spacing: .04em; color: var(--muted); }
 .badge-price {
-  position: absolute; right: -14px; top: 26px; background: var(--white); border: 1px solid var(--line);
+  position: absolute; right: 18px; top: 18px; background: var(--white); border: 1px solid var(--line);
   border-radius: 14px; box-shadow: var(--shadow); padding: 10px 14px; text-align: right;
 }
 .badge-price b { display: block; font-family: var(--font-head); font-weight: 800; color: var(--navy); font-size: 18px; }
